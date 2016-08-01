@@ -6,6 +6,10 @@ const createRoutes = router => {
         res.send(MOCK_QUOTE);
     });
 
+    router.get('/', (req, res, next) => {
+        res.send(MOCK_QUOTE);
+    });
+
     return router;
 }
 
