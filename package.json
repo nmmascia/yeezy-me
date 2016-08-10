@@ -25,6 +25,7 @@
     "fsp": "0.1.2",
     "isomorphic-fetch": "2.2.1",
     "mkdirp": "^0.5.1",
+    "pg-promise": "^5.2.6",
     "snake-case": "^2.1.0"
   },
   "devDependencies": {

@@ -1,11 +1,16 @@
 const fetch = require('isomorphic-fetch');
 const fs = require('fs');
-const fsp = require('fsp');
 const mkdirp = require('mkdirp');
 const path = require('path');
 const snakeCase = require('snake-case');
 
 const albums = require('./yeezy-albums');
+
+const prepLyrics = lyrics => (
+    lyrics
+    .split('\n')
+    .filter(line => line !== '')
+);
 
 const fetchYeezyLyrics = song => {
     const track = snakeCase(song.replace(/'/g, ''));
@@ -14,6 +19,17 @@ const fetchYeezyLyrics = song => {
     return fetch(url, { method: 'get' })
     .then(response => response.json())
     .then(data => data);
+};
+
+const convertLyricsBlockToLines = albumData => {
+    return albumData.map(data => {
+        if (data.lyrics === null) return;
+        return {
+            album: data.album,
+            title: data.title,
+            lyrics: prepLyrics(data.lyrics),
+        };
+    });
 };
 
 const createLyricsDirectory = data => {
@@ -39,6 +55,8 @@ albums.forEach(album => {
     const formattedTitle = snakeCase(album.title.toLowerCase())
 
     Promise.all($lyrics)
+    .then(convertLyricsBlockToLines)
     .then(createLyricsDirectory)
-    .then(data => writeLyricFiles(formattedTitle, data.dir, data.data));
+    .then(data => writeLyricFiles(formattedTitle, data.dir, data.data))
+    .catch(console.log)
 });
