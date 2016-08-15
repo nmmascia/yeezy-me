@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "nodemon ./src/application.js",
     "lint": "eslint ./src .js",
-    "migrate:create": "./node_modules/.bin/migrate create",
-    "migrate": "./node_modules/.bin/migrate",
+    "migrate": "./node_modules/.bin/migrate -c ./src",
+    "migrate:create": "./node_modules/.bin/migrate create -c ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
