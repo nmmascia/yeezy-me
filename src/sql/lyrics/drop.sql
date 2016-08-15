@@ -1,1 +1,1 @@
-DROP TABLE lyrics;
+drop table lyrics;

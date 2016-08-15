@@ -1,1 +1,1 @@
-DROP TABLE albums;
+drop table albums;

@@ -1,7 +1,7 @@
-CREATE TABLE lyrics (
-    id SERIAL,
-    text varchar(255) NOT NULL,
-    line_number integer NOT NULL,
-    song_id integer NOT NULL references songs(id),
-    PRIMARY KEY(id)
+create table lyrics (
+    id serial,
+    text varchar(255) not null,
+    line_number integer not null,
+    song_id integer not null references songs(id),
+    primary key(id)
 );
