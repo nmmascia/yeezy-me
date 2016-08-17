@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "nodemon ./src/application.js",
     "lint": "eslint ./src .js",
+    "migrate": "./node_modules/.bin/migrate -c ./src",
+    "migrate:create": "./node_modules/.bin/migrate create -c ./src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,9 +26,11 @@
     "express": "4.14.0",
     "fsp": "0.1.2",
     "isomorphic-fetch": "2.2.1",
-    "mkdirp": "^0.5.1",
-    "pg-promise": "^5.2.6",
-    "snake-case": "^2.1.0"
+    "migrate": "0.2.3",
+    "mkdirp": "0.5.1",
+    "pg-promise": "5.2.6",
+    "snake-case": "2.1.0",
+    "winston": "2.2.0"
   },
   "devDependencies": {
     "babel-eslint": "6.1.2",
