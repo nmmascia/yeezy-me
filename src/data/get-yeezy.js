@@ -23,7 +23,7 @@ const fetchYeezyLyrics = song => {
 
 const convertLyricsBlockToLines = albumData => {
     return albumData.map(data => {
-        if (data.lyrics === null) return;
+        if (data.lyrics === null) return {};
         return {
             album: data.album,
             title: data.title,
@@ -47,16 +47,16 @@ const writeLyricFiles = (album, dir, data) => {
     const filename = `${album}_lyrics.json`;
     const filepath = `${dir}/${filename}`;
 
-    fs.writeFile(filepath, JSON.stringify(data), 'utf-8', err => console.log);
+    fs.writeFile(filepath, JSON.stringify(data), 'utf-8', err => console.log(err));
 };
 
 albums.forEach(album => {
     const $lyrics = album.songs.map(fetchYeezyLyrics);
-    const formattedTitle = snakeCase(album.title.toLowerCase())
+    const formattedTitle = snakeCase(album.title.toLowerCase());
 
     Promise.all($lyrics)
     .then(convertLyricsBlockToLines)
     .then(createLyricsDirectory)
     .then(data => writeLyricFiles(formattedTitle, data.dir, data.data))
-    .catch(console.log)
+    .catch(console.log);
 });
