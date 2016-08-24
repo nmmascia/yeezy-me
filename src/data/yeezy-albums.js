@@ -21,7 +21,7 @@ module.exports = [
             'No More Parties In LA',
             'Facts (Charlie Heat Version)',
             'Fade',
-            'Saint Pablo'
+            'Saint Pablo',
         ],
     },
     {
@@ -36,7 +36,7 @@ module.exports = [
             'Blood On The Leaves',
             'Guilt Trip',
             'Send It Up',
-            'Bound 2'
+            'Bound 2',
         ],
     },
     {
@@ -54,7 +54,7 @@ module.exports = [
             'Blame Game',
             'Lost In The World',
             'Who Will Survive In America',
-            'See Me Now'
+            'See Me Now',
         ],
     },
     {
@@ -71,7 +71,7 @@ module.exports = [
             'Bad News',
             'See You In My Nightmares',
             'Coldest Winter',
-            'Pinocchio Story'
+            'Pinocchio Story',
         ],
     },
     {
@@ -92,7 +92,7 @@ module.exports = [
             'Big Brother',
             'Good Night',
             'Bittersweet Poetry',
-            'Can\'t Tell Me Nothing (Remix)'
+            'Can\'t Tell Me Nothing (Remix)',
         ],
     },
     {
@@ -118,7 +118,7 @@ module.exports = [
             'Skit #4',
             'Gone',
             'Diamonds From Sierra Leone',
-            'Late'
+            'Late',
         ],
     },
     {
@@ -144,7 +144,7 @@ module.exports = [
             'Two Words',
             'Through The Wire',
             'Family Business',
-            'Last Call'
+            'Last Call',
         ],
-    }
+    },
 ];
