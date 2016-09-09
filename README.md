@@ -16,4 +16,5 @@ a simple application to make all things yeezy
 - create a database in postgres (app name defaults to 'yeezy')
 - `cd yeezy-me && export DB_NAME=<db_name>` *skip this step if using default name*
 - `npm run migrate`
+- `npm run seed`
 
