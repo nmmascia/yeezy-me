@@ -3,10 +3,10 @@ const fsp = require('fs-promise');
 const dashify = require('dashify');
 const path = require('path');
 
-const db = require('../database');
-const sql = require('../sql');
+const db = require('./database');
+const sql = require('./sql');
 
-const YEEZY_ALBUMS = require('./yeezy-albums');
+const YEEZY_ALBUMS = require('./fixtures/yeezy-albums');
 
 const createSong = (_album, _song) => {
     const album = _album;
@@ -66,7 +66,7 @@ Promise.all(songs.map(s => s.load()))
     // Load data into json files: ./json/<album-name>.json
 
     Object.keys(groups).forEach(key => {
-        const filePath = `${path.join(__dirname, 'json', dashify(key.toLowerCase()))}.json`;
+        const filePath = `${path.join(__dirname, 'fixtures', dashify(key.toLowerCase()))}.json`;
 
         fsp.writeFile(filePath, JSON.stringify(groups[key]))
         .then(() => console.log('Wrote file:', key));
