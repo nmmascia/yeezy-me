@@ -1,4 +1,4 @@
 node_modules
 npm-debug.log
 *-spike.js
-src/db/migrations/.migrate
+**/.migrate
