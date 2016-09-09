@@ -4,13 +4,19 @@ const db = require('../database');
 const sql = require('../sql');
 
 exports.up = function (next) {
-    db.query(sql.lyrics.create)
+    db.query(sql.songs.create)
     .then(() => next())
-    .catch(console.log);
+    .catch(err => {
+        console.log(err);
+        next();
+    });
 };
 
 exports.down = function (next) {
-    db.query(sql.lyrics.drop)
+    db.query(sql.songs.drop)
     .then(() => next())
-    .catch(console.log);
+    .catch(err => {
+        console.log(err);
+        next();
+    });
 };
