@@ -58,7 +58,7 @@ module.exports = [
         ],
     },
     {
-        title: '808s & Heartbreak',
+        title: '808s And Heartbreak',
         songs: [
             'Say You Will',
             'Welcome To Heartbreak',
@@ -92,7 +92,6 @@ module.exports = [
             'Big Brother',
             'Good Night',
             'Bittersweet Poetry',
-            'Can\'t Tell Me Nothing (Remix)',
         ],
     },
     {
@@ -110,7 +109,6 @@ module.exports = [
             'Bring Me Down',
             'Addiction',
             'Skit #2',
-            'Diamonds From Sierra Leone (Remix)',
             'We Major',
             'Skit #3',
             'Hey Mama',
