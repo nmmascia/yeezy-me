@@ -1,1 +1,1 @@
-{"migrations":[{"title":"1471221589541-add-albums.js"},{"title":"1471226941970-add-songs.js"},{"title":"147122694sdfsd6364-add-lyrics.js"}],"path":"migrations/.migrate","pos":3,"_events":{},"_eventsCount":1}
+{"migrations":[{"title":"1471221589541-add-albums.js"},{"title":"1471226941970-add-songs.js"},{"title":"1471226946364-add-lyrics.js"}],"path":"migrations/.migrate","pos":3,"_events":{},"_eventsCount":1}
