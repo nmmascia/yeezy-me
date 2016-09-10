@@ -18,6 +18,7 @@ const sqlProvider = {
         create: sql('lyrics/create.sql'),
         drop: sql('lyrics/drop.sql'),
         insert: sql('lyrics/insert.sql'),
+        random: sql('lyrics/random.sql'),
     },
 };
 
