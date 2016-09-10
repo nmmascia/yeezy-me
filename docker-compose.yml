@@ -1,0 +1,19 @@
+db:
+  image: postgres
+  ports:
+    - 5432
+  environment:
+    - POSTGRES_DB=yeezy
+web:
+  build: .
+  ports:
+    - '8080:8080'
+  command: bash -c "sleep 5; npm start"
+  links:
+    - db
+  environment:
+    - DB_HOST=db
+    - DB_PORT=5432
+    - DB_NAME=yeezy
+    - DB_USERNAME=postgres
+    - DB_PASSWORD=postgres
