@@ -6,12 +6,10 @@
   "scripts": {
     "dev": "nodemon ./src/application.js",
     "lint": "eslint ./src --ext .js",
-    "migrate": "./node_modules/.bin/migrate -c ./src",
-    "migrate:create": "./node_modules/.bin/migrate create -c ./src",
-    "start": "npm run migrate down && npm run migrate && nodemon ./src/application.js",
     "migrate": "./node_modules/.bin/migrate -c ./src/db",
     "migrate:create": "./node_modules/.bin/migrate create -c ./src/db",
     "seed": "node ./src/db/seed.js",
+    "start": "npm run migrate down && npm run migrate && nodemon ./src/application.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
