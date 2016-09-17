@@ -9,6 +9,10 @@ app.use(bodyParser.urlencoded({ extended: false }));
 const routes = require('./yeezy-me/routes');
 app.use('/yeezy-me', routes);
 
+app.use((err, req, res, next) => {
+    res.status(500).send({ error: err.name });
+});
+
 //
 
 const port = process.env.PORT || 8080;
