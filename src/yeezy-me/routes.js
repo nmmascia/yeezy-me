@@ -12,13 +12,14 @@ router.get('/', (req, res, next) => {
 router.post('/',
     parseOptions,
     (req, res, next) => {
-        getLyric()
+        getLyric(res.locals.options)
         .then(({ text }) => {
             res.send({
                 response_type: 'in_channel',
                 text,
             });
-        });
+        })
+        .catch(err => next(err));
     }
 );
 
