@@ -31,16 +31,16 @@
     "isomorphic-fetch": "2.2.1",
     "migrate": "0.2.3",
     "mkdirp": "0.5.1",
-    "pg-promise": "5.2.6",
+    "pg-promise": "5.3.3",
     "winston": "2.2.0"
   },
   "devDependencies": {
     "babel-eslint": "6.1.2",
-    "eslint": "3.2.0",
-    "eslint-config-airbnb-base": "5.0.2",
-    "eslint-plugin-import": "1.13.0",
+    "eslint": "3.5.0",
+    "eslint-config-airbnb-base": "7.1.0",
+    "eslint-plugin-import": "1.15.0",
     "minimist": "1.2.0",
-    "mocha": "2.5.3",
-    "nodemon": "1.10.0"
+    "mocha": "3.0.2",
+    "nodemon": "1.10.2"
   }
 }
