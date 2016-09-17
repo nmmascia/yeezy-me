@@ -9,7 +9,7 @@
     "migrate": "./node_modules/.bin/migrate -c ./src/db",
     "migrate:create": "./node_modules/.bin/migrate create -c ./src/db",
     "seed": "node ./src/db/seed.js",
-    "start": "npm run migrate down && npm run migrate && nodemon ./src/application.js",
+    "start": "nodemon ./src/application.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -24,6 +24,7 @@
   },
   "homepage": "https://github.com/nmmascia/yeezy-me#readme",
   "dependencies": {
+    "body-parser": "1.15.2",
     "dashify": "0.2.2",
     "express": "4.14.0",
     "fs-promise": "0.5.0",

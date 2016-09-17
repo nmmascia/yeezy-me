@@ -2,15 +2,25 @@ const express = require('express');
 
 const router = express.Router(); // eslint-disable-line new-cap
 
-const MOCK_QUOTE = `I'm so appalled, spalding ball,
-Balding Donald Trump taking dollars from y'all!\n`;
+const { parseOptions } = require('./middlewares');
+const { getLyric } = require('./service');
 
-router.get('/', (req, res) => {
-    res.send(MOCK_QUOTE);
+router.get('/', (req, res, next) => {
+    res.send('');
 });
 
-router.post('/', (req, res) => {
-    res.send(MOCK_QUOTE);
-});
+router.post('/',
+    parseOptions,
+    (req, res, next) => {
+        getLyric(res.locals.options)
+        .then(({ text }) => {
+            res.send({
+                response_type: 'in_channel',
+                text,
+            });
+        })
+        .catch(err => next(err));
+    }
+);
 
 module.exports = router;

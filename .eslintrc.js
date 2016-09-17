@@ -12,7 +12,7 @@ module.exports = {
         'import/newline-after-import': 0,
         'no-global-assign': 0,
         'no-unsafe-negation': 0,
-        'no-unused-vars': [2, { varsIgnorePattern: '(log|err|next)' }],
+        'no-unused-vars': [2, { varsIgnorePattern: 'log', args: 'none' }],
         strict: 0,
     }
 }
