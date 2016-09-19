@@ -12,7 +12,7 @@ const getBySongWithRange = (title, lines) => {
         });
     }))
     .then(res => {
-        const lyrics = res.map(({ text }) => `${text}\n`).join('');
+        const lyrics = res.reduce((acc, curr) => `${acc}${curr.text}\n`, '');
         return { text: lyrics };
     })
     .catch(err => console.log('Error:', err));
