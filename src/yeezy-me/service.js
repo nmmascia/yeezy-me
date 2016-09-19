@@ -1,25 +1,16 @@
 const db = require('../db/database');
 const sql = require('../db/sql');
 
-const getBySongWithRange = (song, lines) => {
-    return db.task(t => {
-        return t.one(sql.songs.findByTitle, {
-            title: song,
-        })
-        .then(({ id }) => {
-            return t.one(sql.lyrics.findBySong, {
-                songId: id,
-            })
-            .then(({ line_number, song_id }) => {
-                return t.query(sql.lyrics.findBySongWithRange, {
-                    songId: song_id,
-                    min: line_number,
-                    max: parseInt(line_number, 10) + (parseInt(lines, 10) - 1),
-                })
-                .then(d => d);
-            });
+const getBySongWithRange = (title, lines) => {
+    return db.task(t => t.one(sql.songs.findByTitle, { title })
+    .then(({ id }) => t.one(sql.lyrics.findBySong, { songId: id }))
+    .then(({ line_number, song_id }) => {
+        return t.query(sql.lyrics.findBySongWithRange, {
+            songId: song_id,
+            min: line_number,
+            max: parseInt(line_number, 10) + (parseInt(lines, 10) - 1),
         });
-    })
+    }))
     .then(res => {
         const lyrics = res.map(({ text }) => `${text}\n`).join('');
         return { text: lyrics };
@@ -28,8 +19,9 @@ const getBySongWithRange = (song, lines) => {
 };
 
 const getLyric = (options = {}) => {
-    const hasSong = {}.hasOwnProperty.call(options, 'song');
-    const hasLines = {}.hasOwnProperty.call(options, 'lines');
+    const [hasSong, hasLines] = ['song', 'lines'].map(k => {
+        return options.hasOwnProperty(k); // eslint-disable-line
+    });
 
     if (hasSong && hasLines) {
         return getBySongWithRange(options.song, options.lines);
