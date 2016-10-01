@@ -1,8 +1,7 @@
 const parseOptions = (req, res, next) => {
     let options = {};
 
-    if ( typeof req.body.text !== 'undefined' && req.body.text.length ) {
-
+    if (typeof req.body.text !== 'undefined' && req.body.text.length) {
         options = req.body.text
         .split(',')
         .reduce((o, s) => {
