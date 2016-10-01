@@ -14,6 +14,7 @@ router.post('/',
     (req, res, next) => {
         getLyric(res.locals.options)
         .then(({ text }) => {
+            console.log("text", text);
             res.send({
                 response_type: 'in_channel',
                 text,
