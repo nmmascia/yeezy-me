@@ -1,7 +1,7 @@
 const parseOptions = (req, res, next) => {
-    let options = {};
+    let options = req.body;
 
-    if (typeof req.body.text !== 'undefined' && req.body.text.length) {
+    if (req.get('user-agent').includes('Slackbot')) {
         options = req.body.text
         .split(',')
         .reduce((o, s) => {
@@ -9,8 +9,6 @@ const parseOptions = (req, res, next) => {
             o[tuple[0]] = tuple[1];
             return o;
         }, {});
-    } else if (Object.keys(req.body).length) {
-        options = req.body;
     }
 
     res.locals.options = options;
