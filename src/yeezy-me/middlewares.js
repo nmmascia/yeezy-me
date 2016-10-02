@@ -1,7 +1,7 @@
 const parseOptions = (req, res, next) => {
-    let options = {};
+    let options = req.body;
 
-    if (req.body.text.length) {
+    if (req.get('user-agent').includes('Slackbot')) {
         options = req.body.text
         .split(',')
         .reduce((o, s) => {

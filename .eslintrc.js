@@ -7,6 +7,7 @@ module.exports = {
     rules: {
         indent: [2, 4, { SwitchCase: 1 }],
         'arrow-body-style': 0,
+        'arrow-parens': ["error", "as-needed"],
         'func-names': 0,
         'no-param-reassign': 0,
         'import/newline-after-import': 0,

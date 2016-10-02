@@ -20,7 +20,7 @@ const getBySongWithRange = (title, lines) => {
 
 const getLyric = (options = {}) => {
     const [hasSong, hasLines] = ['song', 'lines'].map(k => {
-        return options.hasOwnProperty(k); // eslint-disable-line
+        return {}.hasOwnProperty.call(options, k); // eslint-disable-line
     });
 
     if (hasSong && hasLines) {

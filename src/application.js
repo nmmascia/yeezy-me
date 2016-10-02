@@ -21,7 +21,7 @@ app.use((err, req, res, next) => {
 //
 
 const port = process.env.PORT || 8080;
-app.listen(port, (err) => {
+app.listen(port, err => {
     /* eslint-disable */
     if (err) throw new Error(err);
     console.log(`So go ahead, go nuts, go apeshit on PORT: ${port}`);
