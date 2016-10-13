@@ -17,3 +17,5 @@ web:
     - DB_NAME=yeezy
     - DB_USERNAME=postgres
     - DB_PASSWORD=postgres
+    - VIRTUAL_HOST=yeezyme.com
+    - VIRTUAL_PORT=8080
