@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const express = require('express');
+const path = require('path');
 
 const app = express();
 
@@ -12,6 +13,7 @@ const lyricRoutes = require('./lyric/routes');
 const slackRoutes = require('./slack/routes');
 const statusRoutes = require('./status/routes');
 
+app.use(express.static(path.join(__dirname, 'client')));
 app.use('/lyric', lyricRoutes);
 app.use('/slack', slackRoutes);
 app.use('/status', statusRoutes);
