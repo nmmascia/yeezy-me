@@ -27,7 +27,7 @@ html, body, h1, p {
 }
 
 .header span:last-child {
-  color: red;
+  color: #ff9933;
 }
 
 .example {
@@ -44,5 +44,5 @@ html, body, h1, p {
 }
 
 .example p:last-child {
-  color: red;
+  color: #ff9933;
 }
