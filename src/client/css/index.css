@@ -1,0 +1,48 @@
+html, body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  border: 10px solid #fff;
+  background-color: #000;
+  min-height: 500px;
+}
+
+.header {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  margin: 20px;
+}
+
+.header p {
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 700;
+  font-size: 70px;
+}
+
+.header span:first-child {
+  color: #fff;
+}
+
+.header span:last-child {
+  color: #ff9933;
+}
+
+.example {
+  width: 80%;
+  margin: 0 auto;
+  border: 10px solid #fff;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.example p {
+  padding: 5px 0;
+  font-size: 16px;
+}
+
+.example p:last-child {
+  color: #ff9933;
+}
