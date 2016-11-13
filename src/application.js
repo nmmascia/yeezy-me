@@ -8,10 +8,12 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
-const yeezyRoutes = require('./yeezy-me/routes');
+const lyricRoutes = require('./lyric/routes');
+const slackRoutes = require('./slack/routes');
 const statusRoutes = require('./status/routes');
 
-app.use('/yeezy-me', yeezyRoutes);
+app.use('/lyric', lyricRoutes);
+app.use('/slack', slackRoutes);
 app.use('/status', statusRoutes);
 
 app.use((err, req, res, next) => {

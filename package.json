@@ -28,20 +28,20 @@
     "cors": "^2.8.1",
     "dashify": "0.2.2",
     "express": "4.14.0",
-    "fs-promise": "0.5.0",
+    "fs-promise": "1.0.0",
     "isomorphic-fetch": "2.2.1",
     "migrate": "0.2.3",
     "mkdirp": "0.5.1",
-    "pg-promise": "5.3.3",
-    "winston": "2.2.0"
+    "pg-promise": "5.3.5",
+    "winston": "2.3.0"
   },
   "devDependencies": {
-    "babel-eslint": "7.0.0",
-    "eslint": "3.7.0",
-    "eslint-config-airbnb-base": "8.0.0",
-    "eslint-plugin-import": "2.0.0",
+    "babel-eslint": "7.1.0",
+    "eslint": "3.10.0",
+    "eslint-config-airbnb-base": "10.0.1",
+    "eslint-plugin-import": "2.2.0",
     "minimist": "1.2.0",
-    "mocha": "3.1.0",
-    "nodemon": "1.10.2"
+    "mocha": "3.1.2",
+    "nodemon": "1.11.0"
   }
 }
