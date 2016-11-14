@@ -4,6 +4,14 @@ db:
     - 5432
   environment:
     - POSTGRES_DB=yeezy
+
+nginx-proxy:
+  image: jwilder/nginx-proxy
+  ports:
+    - "80:80"
+  volumes:
+    - /var/run/docker.sock:/tmp/docker.sock
+
 web:
   build: .
   ports:
@@ -17,3 +25,5 @@ web:
     - DB_NAME=yeezy
     - DB_USERNAME=postgres
     - DB_PASSWORD=postgres
+    - VIRTUAL_HOST=yeezyme.com
+    - VIRTUAL_PORT=8080
