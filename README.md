@@ -27,3 +27,10 @@ You should now have a container running a basic node environment as well as the 
 The containers port can be checked using `docker port yeezy-me`.
 
 A curl request can now be made to the endpoint `curl -X POST localhost:<port>/yeezy-me`.
+
+You will have to manually run `npm run migrate` and then `npm run seed` in the web docker container.
+
+
+Top terms per cluster:
+Cluster 0:  ab  len  syn  res  window  urgp  tcp  prec  spt  src
+Cluster 1:  af  len  syn  tcp  window  res  urgp  dpt  mac  kernel
