@@ -52,6 +52,14 @@ body {
     font-size: 22px;
 }
 
+#generate-btn-content {
+    border: 1px solid #9E9E9E;
+    border-radius: 3px;
+    padding: 5px;
+    width: 175px;
+    margin: 0 auto;
+}
+
 #generate-btn:hover {
     cursor: pointer;
 }
