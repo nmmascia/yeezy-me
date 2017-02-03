@@ -1,0 +1,105 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0 10%;
+    height: 100%;
+    width: 80%;
+    text-align: center;
+}
+
+#nav {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding-top: 10px;
+    padding-right: 10px;
+}
+
+#lyrics-container img {
+    position: absolute;
+    opacity: 0.1;
+    left: 0;
+}
+
+#lyrics-container span, #generate-btn  {
+    z-index: 2;
+    position: relative;
+}
+
+#lyrics-container span {
+    padding-top: 167px
+}
+
+#lyrics-container {
+    height: 456px;
+    font-size: 30px;
+    line-height: 100px;
+    width: 612px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#lyrics {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
+}
+
+#generate-btn {
+    margin-top: 5%;
+    padding: 25px;
+    /*border: 1px solid #ababab;*/
+    width: 560px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+#generate-btn:hover {
+    cursor: pointer;
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+    background-color: #FFF;
+    padding-top: 6px;
+}
+
+#curl-ex {
+    padding-bottom: 25px;
+}
+
+@media (max-width: 760px) {
+    #generate-btn, #lyrics-container {
+        width: auto;
+    }
+    #lyrics-container img {
+        position: fixed;
+    }
+}
+
+@media (max-width: 380px) {
+    #lyrics-container {
+        height: 260px;
+    }
+    #lyrics-container span {
+        padding-top: 46px;
+    }
+}
+
+@media (max-width: 325px) {
+    #lyrics-container {
+        height: 224px;
+    }
+    #lyrics-container span {
+        padding-top: 46px;
+        font-size: 23px;
+
+    }
+}

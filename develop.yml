@@ -1,0 +1,3 @@
+web:
+  volumes:
+        - ./src:/nodeapp/src

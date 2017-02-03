@@ -31,6 +31,16 @@ A curl request can now be made to the endpoint `curl -X POST localhost:<port>/ye
 You will have to manually run `npm run migrate` and then `npm run seed` in the web docker container.
 
 
+NOTES:
+In production:
+-`docker-compose build web`
+-`docker-compose up`
+
+In devlopment:
+-`docker-compose -f docker-compose.yml -f devlop.yml -d up`
+this will link the local volume so there will be no need to restart/rebuild the container when developing.
+
+
 Top terms per cluster:
 Cluster 0:  ab  len  syn  res  window  urgp  tcp  prec  spt  src
 Cluster 1:  af  len  syn  tcp  window  res  urgp  dpt  mac  kernel
