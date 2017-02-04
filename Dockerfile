@@ -4,7 +4,10 @@ RUN mkdir -p /nodeapp
 WORKDIR /nodeapp
 
 COPY package.json /nodeapp
-RUN npm install
+COPY yarn.lock /nodeapp
+
+RUN npm install -g yarn \
+  && yarn
 
 COPY src /nodeapp/src
 
