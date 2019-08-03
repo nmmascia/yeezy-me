@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "nodemon ./src/application.js",
     "lint": "eslint ./src --ext .js",
-    "migrate": "./node_modules/.bin/migrate -c ./src/db",
-    "migrate:create": "./node_modules/.bin/migrate create -c ./src/db",
+    "db:migrate": "migrate up -c ./src/db",
+    "db:migrate:create": "migrate create -c ./src/db",
     "seed": "node ./src/db/seed.js",
     "start": "nodemon ./src/application.js",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -24,16 +24,16 @@
   },
   "homepage": "https://github.com/nmmascia/yeezy-me#readme",
   "dependencies": {
-    "body-parser": "1.15.2",
-    "cors": "^2.8.1",
-    "dashify": "0.2.2",
-    "express": "4.14.0",
-    "fs-promise": "1.0.0",
+    "body-parser": "1.19.0",
+    "cors": "^2.8.5",
+    "dashify": "2.0.0",
+    "express": "4.17.1",
+    "fs-promise": "2.0.3",
     "isomorphic-fetch": "2.2.1",
-    "migrate": "0.2.3",
+    "migrate": "1.6.2",
     "mkdirp": "0.5.1",
-    "pg-promise": "5.3.5",
-    "winston": "2.3.0"
+    "pg-promise": "9.0.0",
+    "winston": "3.2.1"
   },
   "devDependencies": {
     "babel-eslint": "7.1.0",
@@ -42,6 +42,7 @@
     "eslint-plugin-import": "2.2.0",
     "minimist": "1.2.0",
     "mocha": "3.1.2",
-    "nodemon": "1.11.0"
+    "nodemon": "1.11.0",
+    "prettier": "^1.18.2"
   }
 }
