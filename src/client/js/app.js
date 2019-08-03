@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 app({
   model: {
     lyric: 'Yeezy, Yeezy how you doing huh?',
@@ -26,10 +28,10 @@ app({
           eventAction: name,
         });
       }
-    }
+    },
   },
-  view: (model, msg) => {
-    return html`
+  view: (model, msg) =>
+    html`
       <div>
         <div id="lyrics-container">
           <img id="background" src="imgs/background.jpg" />
@@ -41,7 +43,6 @@ app({
           </div>
         </div>
       </div>
-    `;
-  },
+    `,
   root: document.getElementById('container'),
 });
