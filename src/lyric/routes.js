@@ -4,14 +4,13 @@ const router = express.Router(); // eslint-disable-line new-cap
 
 const { getLyric } = require('../yeezy-me/service');
 
-router.get('/',
-    (req, res, next) => {
-        getLyric(req.query)
-        .then(({ text }) => {
-            res.send({ lyric: text });
-        })
-        .catch(err => next(err));
+router.get('/', async (req, res, next) => {
+    try {
+        const { text: lyric } = await getLyric(req.query);
+        res.send({ lyric });
+    } catch (error) {
+        next(error);
     }
-);
+});
 
 module.exports = router;
