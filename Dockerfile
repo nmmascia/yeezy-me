@@ -1,4 +1,4 @@
-FROM node:6.4.0
+FROM node:12.7.0
 
 RUN mkdir -p /nodeapp
 WORKDIR /nodeapp
