@@ -19,7 +19,6 @@ app.use('/slack', slackRoutes);
 app.use('/status', statusRoutes);
 
 app.use((err, req, res, next) => {
-    console.log(err);
     res.status(500).send({ error: err.name });
 });
 
